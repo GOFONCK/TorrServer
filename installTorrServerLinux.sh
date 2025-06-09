@@ -425,7 +425,7 @@ function checkInstalledVersion() {
 function UpdateVersion() {
   systemctl stop $serviceName.service
   binName="TorrServer-linux-${architecture}"
-  urlBin="https://github.com/YouROK/TorrServer/releases/latest/download/${binName}"
+  urlBin="https://github.com/GOFONCK/TorrServer/releases/latest/download/${binName}"
   curl -L --progress-bar -# -o "$dirInstall/$binName" "$urlBin"
   chmod +x "$dirInstall/$binName"
   systemctl start $serviceName.service
@@ -434,7 +434,7 @@ function UpdateVersion() {
 function DowngradeVersion() {
   systemctl stop $serviceName.service
   binName="TorrServer-linux-${architecture}"
-  urlBin="https://github.com/YouROK/TorrServer/releases/download/MatriX.$downgradeRelease/${binName}"
+  urlBin="https://github.com/GOFONCK/TorrServer/releases/download/MatriX.$downgradeRelease/${binName}"
   curl -L --progress-bar -# -o "$dirInstall/$binName" "$urlBin"
   chmod +x "$dirInstall/$binName"
   systemctl start $serviceName.service
